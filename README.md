@@ -49,7 +49,7 @@ Você vera sua Key criada logo abaixo. Salve o campo *Value* em um bloco de nota
 <br>
 ![image](https://github.com/Vinicius-Peters/databricks-study/assets/49006283/bb62753a-c58f-47ba-9a79-be01cdd85178)
 
-Pronto, até aqui você devera estar com os 3 parametrôs necessários.
+Pronto, até aqui você devera estar com os 3 parâmetros necessários.
 
 ## Atribuir permissão ao App Registration dentro do Storage Account
 
@@ -94,7 +94,7 @@ Atribuia a opção de Reader e Write para o *Security Principal* para seu Regist
 
 Pronto, todas as permissões necessárias foram atribuidas!
 
-
+## Import dos dados para o notebook no Databricks
 
 
 
