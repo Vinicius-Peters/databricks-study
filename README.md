@@ -111,18 +111,22 @@ source = "abfss://(NOME_DO_SEU_CONTAINER>@(NOME_DO_SEU_STORAGE_ACCOUNT).dfs.core
 mount_point = "/mnt/(Container)/(Folder)/",<br>
 extra_configs = configs)<br>**
 <br>
-Se tudo ocorrer bem, ao executar esse trecho corretamente você vera uma mensagem de sucesso no console.log.
 
-Na célula seguinte você precisará montar a unidade para o diretorio o qual você quer acessar:<br>
+Preencha-os com o seus parâmetros de CLIENT_ID, VALUE_ID, TENANT_ID, NOME_DO_SEU_CONTAINER e NOME_DO_SEU_STORAGE_ACCOUNT.
+
+Se tudo ocorrer bem, ao executar esse trecho corretamente você vera uma mensagem de sucesso no console.
+
+Crie uma célula onde você precisará montar a unidade para o diretorio o qual você quer acessar:<br>
 
 **dbutils.fs.ls("/mnt/(Seu Container)/(Seu diretorio de pastas)/")**<br>
+Prenencha esses campos com seus devidos nomes. <br>
 
 Execute a celula para ver se o acesso deu certo ao diretorio e se seus arquivos estão sendo listados corretamente.<br>
 
 Por fim, use esse código para acessar seu container e atribui-lo a uma variavel e em seguida de um display:<br>
 (Vou utilizar como exemplo esse trecho)<br>
 
-**DF = spark.read.format("csv").options(header="true", inferschema="true").load("/mnt/bronze/STUDY/job_sample.csv")<br>
+**DF = spark.read.format("csv").options(header="true", inferschema="true").load("/mnt/(Container)/(Folder)/job_sample.csv")<br>
 DF.display()<br>**
 
 Dessa forma, você vera seus dados listados!
