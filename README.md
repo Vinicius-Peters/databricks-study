@@ -1,6 +1,6 @@
 # Consumir dados do Data Lake através do Databricks
 Guia para consumir dados do Data lake storage para o Databricks.
--- exemplo de diretorio: <img alt="image" src="">
+
 ## Requisitos mínimos
 - Resource group devidamente criado
 - Storage account que você ira consumir os dados
