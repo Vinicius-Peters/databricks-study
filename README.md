@@ -23,11 +23,11 @@ Clique em + New Registration
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/1.png" style="width: 700px; height: 300px;">
 
-De um nome com as iniciais "ap" para manter as boas práticas: 
+De um nome com as iniciais "ap" ou "app" para manter as boas práticas: 
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/2.png" style="width: 700px; height: 300px;">
 
-Após isso, clique em Register e finalize a criação sem precisar alterar nada.
+Após isso, clique em Register e finalize a criação sem precisar alterar nenhum parâmetro.
 
 Depois de criado, você vera essa tela a seguir.
 <br>
