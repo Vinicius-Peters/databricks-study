@@ -80,7 +80,7 @@ Finalizado essa etapa, você precisara voltar para o container denro do seu Stor
 
 Após selecionar a camda desejada, vá na opção lateral *Manage ACL*
 <br>
-]![image](https://github.com/Vinicius-Peters/databricks-study/assets/49006283/1d670f7a-b442-48ff-a576-7cf75d9fdac4)
+![image](https://github.com/Vinicius-Peters/databricks-study/assets/49006283/1d670f7a-b442-48ff-a576-7cf75d9fdac4)
 
 Atribuia a opção de Reader e Write para o *Security Principal* e logo em seguida clique em *+ADD Principal*
 <br>
