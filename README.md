@@ -1,5 +1,5 @@
 # Consumir dados do Data Lake através do Databricks
-Guia para consumir dados do Data lake storage através o Databricks.
+Guia para consumir dados do Data lake storage através do Databricks.
 
 ## Requisitos mínimos
 - Resource group devidamente criado
