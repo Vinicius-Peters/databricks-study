@@ -98,32 +98,32 @@ Pronto, todas as permissões necessárias foram atribuidas!
 
 Em seu workspace, crie um notebook e cole os seguintes parâmetros na celula:
 
-"%python
-configs = {"fs.azure.account.auth.type":"OAuth",
-       "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-       "fs.azure.account.oauth2.client.id": "<COLE AQUI SEU CLIENT_ID>",
-       "fs.azure.account.oauth2.client.secret": "<COLE AQUI SEU VALUE_ID>",
-       "fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/<COLE AQUI SEU TENANT_ID>/oauth2/token",
-       "fs.azure.createRemoteFileSystemDuringInitialization": "true"}
+**%python
+configs = {"fs.azure.account.auth.type":"OAuth",<br>
+       "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",<br>
+       "fs.azure.account.oauth2.client.id": "(COLE AQUI SEU CLIENT_ID)",<br>
+       "fs.azure.account.oauth2.client.secret": "(COLE AQUI SEU VALUE_ID)",<br>
+       "fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/(COLE AQUI SEU TENANT_ID)/oauth2/token",<br>
+       "fs.azure.createRemoteFileSystemDuringInitialization": "true"}<br>**
 
-dbutils.fs.mount(
-source = "abfss://<NOME_DO_SEU_CONTAINER>@<NOME_DO_SEU_STORAGE_ACCOUNT>.dfs.core.windows.net/",
-mount_point = "/mnt/bronze/study/",
-extra_configs = configs)"
-
+**dbutils.fs.mount(<br>
+source = "abfss://(NOME_DO_SEU_CONTAINER>@(NOME_DO_SEU_STORAGE_ACCOUNT).dfs.core.windows.net/",<br>
+mount_point = "/mnt/(Container)/(Folder)/",<br>
+extra_configs = configs)<br>**
+<br>
 Se tudo ocorrer bem, ao executar esse trecho corretamente você vera uma mensagem de sucesso no console.log.
 
-Na célula seguinte você precisará montar a unidade para o diretorio o qual você quer acessar:
+Na célula seguinte você precisará montar a unidade para o diretorio o qual você quer acessar:<br>
 
-dbutils.fs.ls("/mnt/<Seu Container>/<Seu diretorio de pastas>/")
+**dbutils.fs.ls("/mnt/(Seu Container)/(Seu diretorio de pastas)/")**<br>
 
-Execute a celula para ver se o acesso deu certo ao diretorio e se seus arquivos estão sendo listados corretamente.
+Execute a celula para ver se o acesso deu certo ao diretorio e se seus arquivos estão sendo listados corretamente.<br>
 
-Por fim, use esse código para acessar seu container e atribui-lo a uma variavel e em seguida display:
-(Vou utilizar como exemplo esse trecho)
+Por fim, use esse código para acessar seu container e atribui-lo a uma variavel e em seguida de um display:<br>
+(Vou utilizar como exemplo esse trecho)<br>
 
-DF = spark.read.format("csv").options(header="true", inferschema="true").load("/mnt/bronze/STUDY/job_sample.csv")
-DF.display()
+**DF = spark.read.format("csv").options(header="true", inferschema="true").load("/mnt/bronze/STUDY/job_sample.csv")<br>
+DF.display()<br>**
 
 Dessa forma, você vera seus dados listados!
 
