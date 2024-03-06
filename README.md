@@ -49,7 +49,7 @@ Você vera sua Key criada logo abaixo. Salve o campo *Value* em um bloco de nota
 <br>
 ![image](https://github.com/Vinicius-Peters/databricks-study/assets/49006283/bb62753a-c58f-47ba-9a79-be01cdd85178)
 
-Pronto, até aqui você devera estar com os 3 parâmetros necessários.
+Pronto, até aqui você devera estar com os 3 parâmetros necessários: Client ID, Tenant ID e o Value ID da sua chave.
 
 ## Atribuir permissão ao App Registration dentro do Storage Account
 
@@ -96,11 +96,36 @@ Pronto, todas as permissões necessárias foram atribuidas!
 
 ## Import dos dados para o notebook no Databricks
 
+Em seu workspace, crie um notebook e cole os seguintes parâmetros na celula:
 
+"%python
+configs = {"fs.azure.account.auth.type":"OAuth",
+       "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
+       "fs.azure.account.oauth2.client.id": "<COLE AQUI SEU CLIENT_ID>",
+       "fs.azure.account.oauth2.client.secret": "<COLE AQUI SEU VALUE_ID>",
+       "fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/<COLE AQUI SEU TENANT_ID>/oauth2/token",
+       "fs.azure.createRemoteFileSystemDuringInitialization": "true"}
 
+dbutils.fs.mount(
+source = "abfss://<NOME_DO_SEU_CONTAINER>@<NOME_DO_SEU_STORAGE_ACCOUNT>.dfs.core.windows.net/",
+mount_point = "/mnt/bronze/study/",
+extra_configs = configs)"
 
+Se tudo ocorrer bem, ao executar esse trecho corretamente você vera uma mensagem de sucesso no console.log.
 
+Na célula seguinte você precisará montar a unidade para o diretorio o qual você quer acessar:
 
+dbutils.fs.ls("/mnt/<Seu Container>/<Seu diretorio de pastas>/")
+
+Execute a celula para ver se o acesso deu certo ao diretorio e se seus arquivos estão sendo listados corretamente.
+
+Por fim, use esse código para acessar seu container e atribui-lo a uma variavel e em seguida display:
+(Vou utilizar como exemplo esse trecho)
+
+DF = spark.read.format("csv").options(header="true", inferschema="true").load("/mnt/bronze/STUDY/job_sample.csv")
+DF.display()
+
+Dessa forma, você vera seus dados listados!
 
 
 
