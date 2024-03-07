@@ -71,14 +71,12 @@ Clique na opção *Acess Control (IAM)* e logo em seguida em *+ADD* onde você i
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/8.png" style="width: 700px; height: 300px;">
 
-Você precisará atribuir essas permissões: *Storage Blob Contributor e Storage Blob Reader* <br>
+Você precisará atribuir essas permissões: *Storage Blob Contributor* <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/9.png" style="width: 700px; height: 300px;">
 
 Clique em + Select Members e encontre seu AppRegistration que você criou no passo anterior.
 Exemplo:<br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/10.png" style="width: 700px; height: 300px;"><br>
-
-Após realizado esse passo para *Storage Blob Contributor*, repita o passo para *Storage Blob Reader*
 
 Finalizado essa etapa, você precisara voltar para o container denro do seu Storage account como mostra a imagem abaixo:<br>
 
