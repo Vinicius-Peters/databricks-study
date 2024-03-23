@@ -13,10 +13,10 @@ Guia para consumir dados do Data lake storage através do Databricks.
 - Import dos dados para o notebook no Databricks
 
 ## Melhorias futuras:
-- Utilizar service principal
-- Utilizar Key vault
-- Autenticar o Key Vault no databricks
-- Tabela com Links para os tópicos
+-  Utilizar service principal
+-  Utilizar Key vault
+-  Autenticar o Key Vault no databricks
+-  Tabela com Links para os tópicos
 
 ## Criação do App Registration
 ### Para quê você precisa de um App Registration?
