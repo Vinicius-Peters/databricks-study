@@ -35,7 +35,7 @@ De um nome com as iniciais "ap" ou "app" para manter as boas práticas:
 
 Após isso, clique em Register e finalize a criação sem precisar alterar nenhum parâmetro.
 
-Depois de criado, você vera essa tela a seguir.
+Depois de criado, você verá essa tela a seguir.
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/3.png" style="width: 700px; height: 300px;">
 
