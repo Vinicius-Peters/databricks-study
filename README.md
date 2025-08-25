@@ -29,6 +29,7 @@ Clique em + New Registration
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/1.png" style="width: 700px; height: 300px;">
 
+
 De um nome com as iniciais "ap" ou "app" para manter as boas práticas: 
 <br>
 <img alt="image" src="https://github.com/Vinicius-Peters/databricks-study/blob/main/Images/2.png" style="width: 700px; height: 300px;">
